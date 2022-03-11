@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="data:null;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAADbAP8EemCgABn/ADFZ+UJe2enWYODn32Hi5uFh5sjrYd0o+0/aAP8J2wD/AAAAAAAAAAAAAAAAACP/AAAi/wAE3gX/XSH3Aj06/RzUqu+f++fo5/vn6Of75+nn++fP6v3dKPvW2gD/GdsA/wAAAAAAAAAAACP/AAAh/wACHf8AX8WNzu1K6i/kqPCc/+no6f/o6Oj/6Oro/+jq6P/n0Or/3Sj72toA/xnbAP8AAAAAACP/AAAh/wACHv8AX036Mezb6tn/w+y8/+jo6P/o6Oj/6Obo/+TH6fnl3ubV5s3rzd0o+6zaAP8U2wD/ACT/AAAm/wACHv8AX036MezC7Lv/6ejp/+ro6v/o6Oj/6Ojo/+OT8PvcLfmR2JDjGOXB6w/dKPsM2gD/AYJ9ggAk/wAAIP8AXEr7Le3C7Lv/6ujr/+no6f/o6Oj/6Obo/+OU8PvdHvyQ3QD/DNwA/wAAAAAAAAAAAAAAAAAk/wAAJP8AByD/ALmD9HD/7Ojs/+jp6P/n6Of/6Oro/+bD7P/dI/zIygHtFRn/ABmO8n4j5+jnI+fp5iPjjPEj4AD/Ehr/AAcg/wC8hfRz/+vo6//o7Oj/5ejl/+jr6P/luu3/3RX+u22LaBMh/wCxkPJ/5+vo6+To6+fk44/x6NwA/3sA/wAFIP8AvIX0c//r6Ov/6Ozo/+Xo5eTo6+jk5brt6N0U/qdjmloUIf8Ax4/ygP/r6Oz/6Ozo/+OP8f/cAP+KAP8ABCD/AKiF9HPo6+jr5Ojs6OTl6OUj6OvoI+W67STnCf8YJ/IJFyT/AtCa8Yz/6+js/+js6P/kmvD/2wn+mZY6qAMe/wAZhfRzJOvo6yPo7OgjAAAAAAAAAAAf/wAAF/8ADCT/A49v9ln72urX/+no6f/o6ej/59vp/+Fq9O3bCf5h1QD/AtoA/wAAAAAAAAAAACj/BAqy7qgLl/GJFDT9E49v9ln72+rY/+ro6v/p6On/6ejq/+jq6P/n3On/4Wr17d0e/GLo5ugM5a3uDNwM/ggo/wStq++gxuLp4c7A7bj53Ona/+no6v/p6en/0uvO/9Dry//q6Or/6Ono/+fc6f/mwezv6Ojox+Wr7sjcDP6FKP8E4Krvn//s6Oz/6ujr/+no6f/o6+j/6Mfu/6Kao+RW9zvvyezD/+ro6//o6ej/6Oro/+js6P/lq+7/3Az+rSj/BN2r75/96+js++jo6Pvo6ej75srr/eBN+NLTCfM7HP8AZFX5OuzJ7MT86ejp++jo6Pvo6+j75avu/9wM/qoo/wRWq++fY+vo7GLo6Ohi6OvoYuKF8mLbA/8xipKHAB//AAUe/wBIh/N2Y+ro6mLo6Ohi6OvoYuWr7mPcDP5CQD4AAAA8AAAAOAAAADAAAAAwAAAD4AAAAAAAAAAAAAAAAAAAAAAAAOAHAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA==" type="image/x-icon" />
+    <link rel="icon" href="data:null;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAADbAP8EemCgABn/ADFZ+UJe2enWYODn32Hi5uFh5sjrYd0o+0/aAP8J2wD/AAAAAAAAAAAAAAAAACP/AAAi/wAE3gX/XSH3Aj06/RzUqu+f++fo5/vn6Of75+nn++fP6v3dKPvW2gD/GdsA/wAAAAAAAAAAACP/AAAh/wACHf8AX8WNzu1K6i/kqPCc/+no6f/o6Oj/6Oro/+jq6P/n0Or/3Sj72toA/xnbAP8AAAAAACP/AAAh/wACHv8AX036Mezb6tn/w+y8/+jo6P/o6Oj/6Obo/+TH6fnl3ubV5s3rzd0o+6zaAP8U2wD/ACT/AAAm/wACHv8AX036MezC7Lv/6ejp/+ro6v/o6Oj/6Ojo/+OT8PvcLfmR2JDjGOXB6w/dKPsM2gD/AYJ9ggAk/wAAIP8AXEr7Le3C7Lv/6ujr/+no6f/o6Oj/6Obo/+OU8PvdHvyQ3QD/DNwA/wAAAAAAAAAAAAAAAAAk/wAAJP8AByD/ALmD9HD/7Ojs/+jp6P/n6Of/6Oro/+bD7P/dI/zIygHtFRn/ABmO8n4j5+jnI+fp5iPjjPEj4AD/Ehr/AAcg/wC8hfRz/+vo6//o7Oj/5ejl/+jr6P/luu3/3RX+u22LaBMh/wCxkPJ/5+vo6+To6+fk44/x6NwA/3sA/wAFIP8AvIX0c//r6Ov/6Ozo/+Xo5eTo6+jk5brt6N0U/qdjmloUIf8Ax4/ygP/r6Oz/6Ozo/+OP8f/cAP+KAP8ABCD/AKiF9HPo6+jr5Ojs6OTl6OUj6OvoI+W67STnCf8YJ/IJFyT/AtCa8Yz/6+js/+js6P/kmvD/2wn+mZY6qAMe/wAZhfRzJOvo6yPo7OgjAAAAAAAAAAAf/wAAF/8ADCT/A49v9ln72urX/+no6f/o6ej/59vp/+Fq9O3bCf5h1QD/AtoA/wAAAAAAAAAAACj/BAqy7qgLl/GJFDT9E49v9ln72+rY/+ro6v/p6On/6ejq/+jq6P/n3On/4Wr17d0e/GLo5ugM5a3uDNwM/ggo/wStq++gxuLp4c7A7bj53Ona/+no6v/p6en/0uvO/9Dry//q6Or/6Ono/+fc6f/mwezv6Ojox+Wr7sjcDP6FKP8E4Krvn//s6Oz/6ujr/+no6f/o6+j/6Mfu/6Kao+RW9zvvyezD/+ro6//o6ej/6Oro/+js6P/lq+7/3Az+rSj/BN2r75/96+js++jo6Pvo6ej75srr/eBN+NLTCfM7HP8AZFX5OuzJ7MT86ejp++jo6Pvo6+j75avu/9wM/qoo/wRWq++fY+vo7GLo6Ohi6OvoYuKF8mLbA/8xipKHAB//AAUe/wBIh/N2Y+ro6mLo6Ohi6OvoYuWr7mPcDP5CQD4AAAA8AAAAOAAAADAAAAAwAAAD4AAAAAAAAAAAAAAAAAAAAAAAAOAHAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA==" type="image/x-icon" />
+
+    <title>Simlusion</title>
+    <script type="module" crossorigin src="/assets/index.a9c7a5b4.js"></script>
+    <link rel="modulepreload" href="/assets/vendor.8a0efefd.js">
+    <link rel="stylesheet" href="/assets/index.c1aafbc5.css">
+  </head>
+  <body>
+    <canvas id="bg"> </canvas>
+
+    <header>
+      <div class="nav-container">
+        <nav class="navbar">
+          <a href="#home" id="nav-logo">
+            <img src="/assets/nav-logo.b5766d0a.png" alt=""
+          /></a>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#about" class="nav-links text-glitch">about</a></li>
+            <li>
+              <a href="#examples" class="nav-links text-glitch">examples</a>
+            </li>
+            <li>
+              <a href="#pricing" class="nav-links text-glitch">pricing</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-links text-glitch">contact</a>
+            </li>
+            <li>
+              <div class="nav-links">
+                <a href="#" class="cyber-btn">
+                  start now
+                  <span></span>
+                  <span class="cyber-glitch">START n0w_</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <img src="/assets/logo300px.41d68b7c.png" alt="" />
+        <br />
+        <br />
+        <h2 class="border-pink text-glitch">Simulate Reality</h2>
+        <h2>Find Future Patterns</h2>
+        <br />
+        <br />
+        <p>With Simlusion you can easily simulate complex systems.</p>
+        <p>When the simulation is ready, it contains all possible paths.</p>
+        <p>By stretching these paths over time, you can unfold the future.</p>
+        <br />
+        <div>
+          <a href="#" class="cyber-btn">
+            start now
+            <span></span>
+            <span class="cyber-glitch">START n0w_</span>
+          </a>
+        </div>
+      </section>
+      <section id="about">
+        <div>
+          <p>It all started with this one thought:</p>
+          <h2 class="border-green">
+            It is impossible to&nbsp;win against someone who knows
+            the&nbsp;future...
+          </h2>
+          <br />
+          <p>
+            Contrary to what most people think, we believe the future is
+            predictable. Only to a certain extent so far, but we are doing
+            better and better.
+          </p>
+          <br />
+          <p>
+            Yes, we know, that sounds like blah blah blah, but you don't have to
+            believe us, just check how it works:
+          </p>
+          <br />
+          <a href="#" class="cyber-btn cyber-btn-green">
+            DEMO
+            <span>_</span>
+            <span class="cyber-glitch">dem0_</span>
+          </a>
+        </div>
+        <div class="none800"></div>
+      </section>
+      <section id="examples">
+        <div>
+          <h2>The real life examples:</h2>
+        </div>
+        <div>
+          <h3>EXAMPLE_01</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            fugiat rem repudiandae sit, quo maiores consequuntur quaerat odit
+            enim at esse assumenda distinctio officia ea? Officiis, aperiam
+            libero! Minus, totam.
+          </p>
+          <br />
+          <a href="#" class="cyber-btn cyber-btn-green">
+            READ MORE
+            <span>_</span>
+            <span class="cyber-glitch">REXD m0re_</span>
+          </a>
+          <br />
+        </div>
+
+        <div>
+          <h3>EXAMPLE_02</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            fugiat rem repudiandae sit, quo maiores consequuntur quaerat odit
+            enim at esse assumenda distinctio officia ea? Officiis, aperiam
+            libero! Minus, totam.
+          </p>
+          <br />
+          <a href="#" class="cyber-btn cyber-btn-green">
+            READ MORE
+            <span>_</span>
+            <span class="cyber-glitch">REXD m0re_</span>
+          </a>
+          <br />
+        </div>
+
+        <div>
+          <h3>EXAMPLE_03</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            fugiat rem repudiandae sit, quo maiores consequuntur quaerat odit
+            enim at esse assumenda distinctio officia ea? Officiis, aperiam
+            libero! Minus, totam.
+          </p>
+          <br />
+          <a href="#" class="cyber-btn cyber-btn-green">
+            READ MORE
+            <span>_</span>
+            <span class="cyber-glitch">REXD m0re_</span>
+          </a>
+          <br />
+        </div>
+
+        <div>
+          <h3>EXAMPLE_04</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            fugiat rem repudiandae sit, quo maiores consequuntur quaerat odit
+            enim at esse assumenda distinctio officia ea? Officiis, aperiam
+            libero! Minus, totam.
+          </p>
+          <br />
+          <a href="#" class="cyber-btn cyber-btn-green">
+            READ MORE
+            <span>_</span>
+            <span class="cyber-glitch">REXD m0re_</span>
+          </a>
+          <br />
+        </div>
+      </section>
+
+      <section id="pricing">
+        <h2>Pricing</h2>
+        <br />
+        <p>The price of our service is simple:</p>
+        <h2 class="border-pink">$X.XX per channel</h2>
+        <br />
+        <p>
+          More than one channel is recommended for corporate clients and
+          professionals.
+        </p>
+        <h3>Subscription model billed monthly.</h3>
+        <h3>First month is free of charge.</h3>
+        <br />
+        <br />
+        <p class="italic">
+          *If your organization serves the local community, contact us for a
+          price reduction.
+        </p>
+        <p class="italic">
+          *If you like lower prices, follow our social media, sometimes we offer
+          discounts.
+        </p>
+        <br />
+        <a href="#" class="cyber-btn">
+          BUY
+          <span>_</span>
+          <span class="cyber-glitch">bVy_</span>
+        </a>
+      </section>
+
+      <section id="contact">
+        <p>Find out more on our social media:</p>
+        <div class="social">
+          <a href=""><i class="ri-facebook-fill text-glitch"></i></a>
+          <a href="https://twitter.com/simlusion1"
+            ><i class="ri-twitter-line text-glitch"></i
+          ></a>
+          <a href=""><i class="ri-medium-line text-glitch"></i></a>
+        </div>
+        <br />
+        <br />
+        <br />
+        <p>We are here for you, please do not hesitate:</p>
+        <h2>Contact us</h2>
+        <br />
+        <form
+          action="https://formsubmit.co/aleksander@simlusion.com"
+          method="POST"
+        >
+          <input
+            name="name"
+            type="text"
+            class="feedback-input"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            name="email"
+            type="text"
+            class="feedback-input"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            name="text"
+            class="feedback-input"
+            placeholder="How can we help you?"
+            required
+          ></textarea>
+          <button type="submit">SUBMIT</button>
+
+          <input
+            type="hidden"
+            name="_next"
+            value="http://simlusion.com/secret/contact.html"
+          />
+          <input type="hidden" name="_subject" value="Main contact form" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display: none" />
+        </form>
+        <br />
+        <br />
+        <div class="legal">
+          <a href="">legal information /</a>
+          <a href="">&nbsp;privacy policy /</a>
+        </div>
+        <div class="legal">
+          <a href="">Copyright © 2022 SIMLUSION</a>
+        </div>
+      </section>
+    </main>
+
+    
+  </body>
+</html>
